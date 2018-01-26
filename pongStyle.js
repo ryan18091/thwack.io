@@ -7,7 +7,29 @@ var Field=document.getElementsByClassName('Field');
 var leftPaddleTop = 76;
 var rightPaddleTop = 76;
 
+// listen any touch event
+document.addEventListener('touchstart', handleTouchEvent, true);
+document.addEventListener('touchmove', handleTouchEvent, true);
+document.addEventListener('touchend', handleTouchEvent, true);
+document.addEventListener('touchcancel', handleTouchEvent, true);
 
+// will adjust leftpaddl's y to latest touch
+function handleTouchEvent(e) {
+    if (e.touches.length === 0 ) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var touch = e.touches[0];
+    leftPaddle.style.top = (e.pageY - 50) + 'px';
+}
+
+
+// will adjust leftpaddle's y to latest mouse event
+
+document.addEventListener('mousemove', handleMouseEvent);
+
+function handleMouseEvent(e) {
+    leftPaddle.style.top = (e.pageY - 50) + 'px';
+}
 
 var change = 0;
 var pressed = false;
@@ -56,7 +78,6 @@ $(document).keydown(function(e) {
 
 
 
-
 function getPosition() {
     x = $("#leftPaddle").position();
     leftPaddleTop = (x.top);
@@ -68,80 +89,7 @@ function getPosition() {
 
 
 
-/*
 
-
-
-//
-//
-// var interval = setInterval(anim, 15);
-//
-// function test(){
-//     console.log('test');
-// }
-//
-// function movePaddle(){
-//     var interval = setInterval(test(), 15);
-// }
-//
-// movePaddle();
-
-function anim(e){
-    //console.log(leftPaddleTop);
-    console.log(e.keyCode);
-    if (e.keyCode==40) {
-        leftPaddleTop +=1;
-        leftPaddle.style.top = leftPaddleTop + 'px';
-        if (leftPaddleTop >= 298){
-            leftPaddleTop -=1;
-        }
-
-
-    }
-    if(e.keyCode==38) {
-        leftPaddleTop -=1;
-        leftPaddle.style.top = leftPaddleTop + 'px';
-        if (leftPaddleTop <= 0){
-            leftPaddleTop +=4;
-        }
-        if (leftPaddleTop >= 296){
-            leftPaddleTop -=1;
-        }
-
-    } else {
-
-    }
-
-    /*if(e.keyCode==40) {
-        rightPaddleTop +=4;
-        rightPaddle.style.top = rightPaddleTop + 'px';
-        if (rightPaddleTop >= 298){
-            rightPaddleTop -=4;
-        }
-
-
-
-    }
-    if(e.keyCode==38) {
-        rightPaddleTop -=4;
-        rightPaddle.style.top = rightPaddleTop + 'px';
-        if (rightPaddleTop <= 0){
-            rightPaddleTop +=4;
-        }
-        if (rightPaddleTop >= 296){
-            rightPaddleTop -=4;
-        }
-
-    }
-
-}
-
-//document.onkeydown = anim;
-//document.onkeyup =
-
-
-
-*/
 var posTop = 195;
 var posLeft = 295;
 var ball = document.getElementById("ball");
@@ -194,7 +142,7 @@ function startMove() {
   var strikeAngle = 0
   var speed = 1
   function frame() {
-      console.log('frame');
+      // console.log('frame');
       getPosition();
       inBounds();
       //console.log(leftPaddleTop);

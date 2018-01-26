@@ -99,3 +99,17 @@ html {
     top: 400px;
     left: 170px;
 }
+
+.FrontPage {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+   height: 50vh;
+    width: 80vw;
+    /*background-color: aqua;*/
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

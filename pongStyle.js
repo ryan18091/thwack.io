@@ -8,12 +8,14 @@ var leftPaddleTop = 76;
 var rightPaddleTop = 76;
 
 
+
 var change = 0;
 var pressed = false;
 $(document).keydown(function(e) {
     if(!pressed){
         width = $(this).width();
         height = $(this).height();
+        start = true;
         switch (e.which) {
             // case 37:
             //     $('#leftPaddle').stop().animate({
@@ -140,8 +142,8 @@ function anim(e){
 
 
 */
-var posTop = 200;
-var posLeft = 300;
+var posTop = 195;
+var posLeft = 295;
 var ball = document.getElementById("ball");
 
 //var p1score = 0;
@@ -170,7 +172,6 @@ function aI() {
 
 
 function inBounds() {
-    console.log('in');
      if (leftPaddleTop <=0) {
              $('#leftPaddle').stop();
              leftPaddle.style.top = (leftPaddleTop + .1) + 'px';
@@ -185,6 +186,7 @@ function inBounds() {
 
 var angle = 1
 function startMove() {
+  console.log('start');
   var ball = document.getElementById("ball");
   var id = setInterval(frame, 1);
   var move = 'right';
@@ -192,6 +194,7 @@ function startMove() {
   var strikeAngle = 0
   var speed = 1
   function frame() {
+      console.log('frame');
       getPosition();
       inBounds();
       //console.log(leftPaddleTop);
@@ -219,7 +222,7 @@ function startMove() {
               var player = 1
               score(player);
               reset();
-              //clearInterval(id);
+              clearInterval(id);
           // Detects if ball has collided with top line and switched movement to down
           } else if (posTop <= 0) {
                   posTop += angle;
@@ -277,8 +280,8 @@ function startMove() {
               var player = 2
               score(player);
               reset();
-              //clearInterval(id);
-          // Detects if ball has collided with top line and switched movement to down
+              clearInterval(id);
+              // Detects if ball has collided with top line and switched movement to down
           } else if (posTop <= 0) {
                   posTop += angle;
                   posLeft -= speed;
@@ -336,38 +339,31 @@ function startMove() {
 var p1score = 0;
 
 var p2score = 0;
-/*
-$(document).ready(function(){
-$('#start').click(function(){
-    startMove()
-});
-});
 
 
-*/
 
 
-document.body.onkeyup = function(e){
+document.body.onkeydown = function(e){
     if(e.keyCode == 32){
-        startMove()
+        startMove();
+        console.log(start);
+        // event.preventDefault()
     }
 }
+
 
 
 
 
 
 function reset() {
-    posTop = 200;
-    posLeft = 300;
+    posTop = 195;
+    posLeft = 295;
     angle = 1;
     ball.style.top = posTop + 'px';
     ball.style.left = posLeft + "px";
-    document.body.onclick = function(e){
-    if(e.keyCode == 32){
-        startMove()
-    }
-}
+    console.log('reset');
+
 }
 
 

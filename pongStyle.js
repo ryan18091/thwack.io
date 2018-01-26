@@ -18,6 +18,7 @@ function handleTouchEvent(e) {
     if (e.touches.length === 0 ) return;
     e.preventDefault();
     e.stopPropagation();
+    startMove()
     var touch = e.touches[0];
     if (e.pageY < 49) {
         return;
@@ -27,7 +28,6 @@ function handleTouchEvent(e) {
     else {
         leftPaddle.style.top = (e.pageY - 50) + 'px';
     }
-    // leftPaddle.style.top = (e.pageY - 50) + 'px';
 }
 
 
@@ -351,5 +351,27 @@ function score(player) {
 document.getElementById("player1score").innerHTML = p1score;
 document.getElementById("player2score").innerHTML = p2score;
 
+
+// listen any touch event
+document.addEventListener('touchstart', handleTouchEvent, true);
+document.addEventListener('touchmove', handleTouchEvent, true);
+document.addEventListener('touchend', handleTouchEvent, true);
+document.addEventListener('touchcancel', handleTouchEvent, true);
+
+// will adjust leftpaddl's y to latest touch
+function handleTouchEvent(e) {
+    if (e.touches.length === 0 ) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var touch = e.touches[0];
+    if (e.pageY < 49) {
+        return;
+    } else if (e.pageY > 350) {
+        return;
+    }
+    else {
+        leftPaddle.style.top = (e.pageY - 50) + 'px';
+    }
+}
 
 });

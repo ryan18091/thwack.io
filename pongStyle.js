@@ -19,7 +19,15 @@ function handleTouchEvent(e) {
     e.preventDefault();
     e.stopPropagation();
     var touch = e.touches[0];
-    leftPaddle.style.top = (e.pageY - 50) + 'px';
+    if (e.pageY < 49) {
+        return;
+    } else if (e.pageY > 350) {
+        return;
+    }
+    else {
+        leftPaddle.style.top = (e.pageY - 50) + 'px';
+    }
+    // leftPaddle.style.top = (e.pageY - 50) + 'px';
 }
 
 

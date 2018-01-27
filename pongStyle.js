@@ -7,37 +7,7 @@ var Field=document.getElementsByClassName('Field');
 var leftPaddleTop = 76;
 var rightPaddleTop = 76;
 
-// // listen any touch event
-// document.addEventListener('touchstart', handleTouchEvent, true);
-// document.addEventListener('touchmove', handleTouchEvent, true);
-// document.addEventListener('touchend', handleTouchEvent, true);
-// document.addEventListener('touchcancel', handleTouchEvent, true);
-//
-// // will adjust leftpaddl's y to latest touch
-// function handleTouchEvent(e) {
-//     if (e.touches.length === 0 ) return;
-//     e.preventDefault();
-//     e.stopPropagation();
-//     startMove();
-//     var touch = e.touches[0];
-//     if (e.pageY < 49) {
-//         return;
-//     } else if (e.pageY > 350) {
-//         return;
-//     }
-//     else {
-//         leftPaddle.style.top = (e.pageY - 50) + 'px';
-//     }
-// }
-
-
-// // will adjust leftpaddle's y to latest mouse event
-//
-// document.addEventListener('mousemove', handleMouseEvent);
-//
-// function handleMouseEvent(e) {
-//     leftPaddle.style.top = (e.pageY - 50) + 'px';
-// }
+.style.top = (e.pageY - 50) + 'px';
 
 var change = 0;
 var pressed = false;
@@ -82,21 +52,10 @@ $(document).keydown(function(e) {
 
 
 
-
-
-
-
 function getPosition() {
     x = $("#leftPaddle").position();
     leftPaddleTop = (x.top);
 }
-
-
-
-
-
-
-
 
 var posTop = 195;
 var posLeft = 295;
@@ -300,11 +259,7 @@ function startMove() {
 
 
 var p1score = 0;
-
 var p2score = 0;
-
-
-
 
 document.body.onkeydown = function(e){
     if(e.keyCode == 32){
@@ -312,11 +267,6 @@ document.body.onkeydown = function(e){
         event.preventDefault()
     }
 }
-
-
-
-
-
 
 function reset() {
     posTop = 195;
@@ -380,21 +330,6 @@ function handleTouchEvent(e) {
         leftPaddle.style.top = (e.pageY - 50) + 'px';
     }
 }
-
-// if (startmove == 2) {
-//     startMove()
-// }
-
-// will adjust leftpaddle's y to latest mouse event
-//
-// document.addEventListener('mousemove', handleMouseEvent);
-//
-// function handleMouseEvent(e) {
-//     leftPaddle.style.top = (e.pageY - 50) + 'px';
-//     startMove();
-//
-
-
 
 
 

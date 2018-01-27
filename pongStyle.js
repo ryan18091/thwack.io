@@ -386,13 +386,13 @@ function handleTouchEvent(e) {
 // }
 
 // will adjust leftpaddle's y to latest mouse event
-
-document.addEventListener('mousemove', handleMouseEvent);
-
-function handleMouseEvent(e) {
-    leftPaddle.style.top = (e.pageY - 50) + 'px';
-    startMove();
-}
+//
+// document.addEventListener('mousemove', handleMouseEvent);
+//
+// function handleMouseEvent(e) {
+//     leftPaddle.style.top = (e.pageY - 50) + 'px';
+//     startMove();
+// }
 
 
 

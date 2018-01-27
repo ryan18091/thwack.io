@@ -7,7 +7,6 @@ var Field=document.getElementsByClassName('Field');
 var leftPaddleTop = 76;
 var rightPaddleTop = 76;
 
-.style.top = (e.pageY - 50) + 'px';
 
 var change = 0;
 var pressed = false;

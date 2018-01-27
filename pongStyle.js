@@ -330,7 +330,7 @@ function handleTouchEvent(e) {
         leftPaddle.style.top = (e.pageY - 50) + 'px';
     }
 }
-
+s
 
 
 });

@@ -392,7 +392,7 @@ function handleTouchEvent(e) {
 // function handleMouseEvent(e) {
 //     leftPaddle.style.top = (e.pageY - 50) + 'px';
 //     startMove();
-// }
+//
 
 
 

@@ -114,11 +114,18 @@ html {
 }
 
 .FrontPage {
+    /*display: inline-flex;*/
+    /*padding-top: 10vh;*/
     position: fixed;
-    margin-top: 10vh;
-    margin-left: 10vw;
-   height: 50vh;
-    width: 80vw;
+    margin:auto;
+    position: fixed;
+    left: 50%;
+    max-width:60em;
+    max-height:18em;
+    margin-top: 5em; /*set to a negative number 1/2 of your height*/
+    margin-left: -30em; /*set to a negative number 1/2 of your width*/
+   /*height: 50vh;*/
+    /*width: 80vw;*/
     /*background-color: aqua;*/
 }
 
@@ -155,15 +162,14 @@ img {
 }
 
 .container {
-width: 100%;
-height: 100%;
-position: absolute;
-padding:0;
-margin:0;
-left: 0px;
-top: 0px;
-z-index: -1000;
-overflow:hidden;
+    text-align: center;
+    position: absolute;
+    padding:0;
+    margin:0;
+    left: 0px;
+    top: 0px;
+    z-index: -1000;
+    overflow:hidden;
 }
 
 .videoPlayer {
@@ -172,4 +178,11 @@ overflow:hidden;
 position:absolute;
 bottom:0;
 left:0;
+}
+
+.start {
+    color: white;
+    font-size: inherit;
+    margin-left: 43vw;
+
 }

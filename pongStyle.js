@@ -22,6 +22,7 @@ $(document).keydown(function(e) {
             //     }, 2000); //left arrow key
             //     break;
             case 38:
+                startMove();
                 $('#leftPaddle').stop().animate({
                     top: '-=' + height
             }, 2000);
@@ -34,6 +35,7 @@ $(document).keydown(function(e) {
             //     }, 2000); //right arrow key
             //     break;
             case 40:
+                startMove();
                 $('#leftPaddle').stop().animate({
                     top: '+=' + height
                 }, 2000);
@@ -54,6 +56,7 @@ $(document).keydown(function(e) {
 function getPosition() {
     x = $("#leftPaddle").position();
     leftPaddleTop = (x.top);
+    console.log(leftPaddleTop);
 }
 
 var posTop = 195;
@@ -88,10 +91,10 @@ function aI() {
 function inBounds() {
      if (leftPaddleTop <=0) {
              $('#leftPaddle').stop();
-             leftPaddle.style.top = (leftPaddleTop + .1) + 'px';
+             leftPaddle.style.top = .1 + 'px';
       } else if (leftPaddleTop >= 300) {
              $('#leftPaddle').stop();
-             leftPaddle.style.top = (leftPaddleTop - .1) + 'px';
+             leftPaddle.style.top = 299.9 + 'px';
       } else {
 
      }
@@ -110,7 +113,7 @@ function startMove() {
   var speed = 1
   function frame() {
       // console.log('frame');
-          getPosition();
+      getPosition();
       inBounds();
 
       //console.log(leftPaddleTop);
@@ -257,6 +260,8 @@ function startMove() {
 }
 
 
+
+
 var p1score = 0;
 var p2score = 0;
 
@@ -329,7 +334,7 @@ function handleTouchEvent(e) {
         leftPaddle.style.top = (e.pageY - 50) + 'px';
     }
 }
-s
+
 
 
 });

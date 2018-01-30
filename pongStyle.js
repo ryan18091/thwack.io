@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+
+
+
+
 var leftPaddle=document.getElementById('leftPaddle');
 var rightPaddle=document.getElementById('rightPaddle');
 var Field=document.getElementsByClassName('Field');
@@ -26,7 +30,7 @@ $(document).keydown(function(e) {
                 $('#leftPaddle').stop().animate({
                     top: '-=' + height
             }, 2000);
-                console.log(leftPaddleTop);
+                // console.log(leftPaddleTop);
                 //up arrow key
                 break;
             // case 39:
@@ -39,7 +43,7 @@ $(document).keydown(function(e) {
                 $('#leftPaddle').stop().animate({
                     top: '+=' + height
                 }, 2000);
-                console.log(leftPaddleTop);
+                // console.log(leftPaddleTop);
 
                 //bottom arrow key
                 break;
@@ -56,7 +60,7 @@ $(document).keydown(function(e) {
 function getPosition() {
     x = $("#leftPaddle").position();
     leftPaddleTop = (x.top);
-    console.log(leftPaddleTop);
+    // console.log(leftPaddleTop);
 }
 
 var posTop = 195;
@@ -104,7 +108,7 @@ function inBounds() {
 var angle = 1
 function startMove() {
   if (posTop == 195 && posLeft == 295) {
-  console.log('start');
+  // console.log('start');
   var ball = document.getElementById("ball");
   var id = setInterval(frame, 1);
   var move = 'right';
@@ -278,7 +282,7 @@ function reset() {
     angle = 1;
     ball.style.top = posTop + 'px';
     ball.style.left = posLeft + "px";
-    console.log('reset');
+    // console.log('reset');
 
 }
 

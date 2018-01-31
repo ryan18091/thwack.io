@@ -186,10 +186,3 @@ left:0;
     margin-left: 43vw;
 
 }
-
-@media only screen and (max-width: 767px) {
-.front {
-background-size: 100% 100% !important;
-background-position: 0px 0px !important;
-background-image: url(Background-Main.png) !important;
-}}

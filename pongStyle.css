@@ -4,6 +4,7 @@ html {
 
 .front {
         background-image: url("Background-Main.png");
+    background-size: cover;
 
 }
 
@@ -172,7 +173,6 @@ img {
     margin:0;
     z-index: -1000;
     overflow:hidden;
-    background-image: url("Background-Main.png");
 }
 
 .videoPlayer {

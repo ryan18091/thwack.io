@@ -97,8 +97,6 @@ html {
     border-right: .5px dashed white;
     width: 298px;
     height: 400px;
-    top: 0px;
-    left: 0px;
 }
 
 .button {
@@ -107,10 +105,10 @@ html {
     color: white;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 5vh;
     cursor: pointer;
-    top: 400px;
-    left: 170px;
+    top: 60vh;
+    left: 40vw;
 }
 
 .FrontPage {
@@ -166,8 +164,6 @@ img {
     position: absolute;
     padding:0;
     margin:0;
-    left: 0px;
-    top: 0px;
     z-index: -1000;
     overflow:hidden;
 }

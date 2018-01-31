@@ -5,7 +5,7 @@ html {
 .front {
     background-image: url("Background-Main.png");
     /*background-color: slategray;*/
-    background-size: cover;
+    background-size: auto;
     z-index: -1;
 
 }
@@ -103,7 +103,7 @@ html {
 
 .dashedLine {
     position: absolute;
-    border-right: .5px dashed white;
+    border-right: 1px dashed white;
     width: 298px;
     height: 400px;
 }

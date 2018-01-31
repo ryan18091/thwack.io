@@ -3,8 +3,10 @@ html {
 }
 
 .front {
-        background-image: url("Background-Main.png");
+    background-image: url("Background-Main.png");
+    /*background-color: slategray;*/
     background-size: cover;
+    z-index: -1;
 
 }
 

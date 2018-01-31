@@ -3,47 +3,35 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Cache-Control" content="max-age=10" />
-
-
         <title>Thwack</title>
         <link rel="stylesheet" type="text/css" href="pongStyle.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
     </head>
 
     <body class="front">
-    <div class="container">
 
-    <!--<video preload="metadata" poster="Background-Main.png" loop="loop" class="videoPlayer" autoplay muted  id="myVideo">-->
-      <!--&lt;!&ndash;&lt;!&ndash;<source src="Explosion.mp4" type="video/mp4">&ndash;&gt;&ndash;&gt;-->
-      <!--&lt;!&ndash;&lt;!&ndash;<source src="Explosion.ogv" type="video/ogv">&ndash;&gt;&ndash;&gt;-->
-      <!--&lt;!&ndash;&lt;!&ndash;<source src="Explosion.webm" type="video/webm">&ndash;&gt;&ndash;&gt;-->
-    <!--</video>-->
+    <video autoplay muted loop id="myVideo">
+      <source src="Background_08.mov" type="video/mp4">
+    </video>
 
     <div class="FrontPage">
         <!--<h4>Welcome to</h4>-->
 
-        <img src="thwack1.png" class="w3-animate-zoom " >
+        <img src="thwack1.png" class="w3-container w3-center w3-animate-zoom " style="margin: auto" >
 
-        <h4 id="info" class="subheading mb-5 " style="font-size: 2vw">
+        <h4 id="info" class="subheading mb-5 ">
             Thwack.io is a simple Pong emulator built using JavaScript. Play on a desktop with the up and down
             arrows, or play on a mobile device wth the touchscreen to control the left paddle.
         </h4>
+        <div id="mainBTN">
+        <a href="pong.html" class="btn btn-danger btn-lg btn-block active" role="button" aria-pressed="true">Click to Play</a>
 
-        <a href="pong.html" class="btn btn-danger btn-lg btn-block active" role="button" aria-pressed="true" style="margin-top: 5vh;max-width: 16vw; font-size: 2vw; margin-left: auto; margin-right: auto">Click to Play</a>
+        </div>
 
     </div>
 
 
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-    <!--<script src="LandingPage.js"></script>-->
 
 
     </body>

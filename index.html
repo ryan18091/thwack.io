@@ -7,15 +7,18 @@
         <link rel="stylesheet" type="text/css" href="pongStyle.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
     </head>
 
     <body class="front">
     <div class="container">
 
-    <video class="videoPlayer" autoplay muted loop id="myVideo">
-      <source src="Explosion.mp4" type="video/mp4">
-      <source src="Explosion.ogv" type="video/ogv">
-      <source src="Explosion.webm" type="video/webm">
+    <video preload="metadata" poster="Background-Main.png" loop="loop" class="videoPlayer" autoplay muted  id="myVideo">
+      <!--<source src="Explosion.mp4" type="video/mp4">-->
+      <!--<source src="Explosion.ogv" type="video/ogv">-->
+      <!--<source src="Explosion.webm" type="video/webm">-->
     </video>
 
     <div class="FrontPage">
@@ -36,6 +39,7 @@
     </div>
 
 
+    <script src="LandingPage.js"></script>
 
 
     </body>

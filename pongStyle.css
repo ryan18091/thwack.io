@@ -188,7 +188,7 @@ left:0;
 }
 
 @media only screen and (max-width: 767px) {
-.container {
+.front {
 background-size: 100% 100% !important;
 background-position: 0px 0px !important;
 background-image: url(Background-Main.png) !important;

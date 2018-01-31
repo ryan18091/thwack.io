@@ -11,6 +11,7 @@ function detectmob() {
 
         console.log('mobile');
 
+
     }
     else {
 

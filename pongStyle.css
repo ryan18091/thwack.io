@@ -2,17 +2,23 @@ html {
 
 }
 
+body {
+
+}
+
 .front {
     background-image: url("Background-Main.png");
     /*background-color: slategray;*/
-    background-size: auto;
+    /*background-size: ;*/
+    overflow: hidden;
     z-index: -1;
+
 
 }
 
 .game {
     background-image: url("Background-Main.png");
-    background-size: cover;
+    /*background-size: cover;*/
 }
 
 .Field {
@@ -121,19 +127,37 @@ html {
 }
 
 .FrontPage {
-    /*display: inline-flex;*/
-    /*padding-top: 10vh;*/
-    position: fixed;
+  display: inline-block;
+  /*margin-top: 5vh;*/
+    /*padding-left: 5vw;*/
+
+
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+
+
+    position: relative;
+    /*height:400px;*/
+    /*width: 600px;*/
+    /*margin-left: auto;*/
+    margin-right: auto;
+
+
+    /*display: inline-block;*/
+    /*!*padding-top: 10vh;*!*/
+    /*width: 100%;*/
+    /*!*height: 66vh;*!*/
+
     margin:auto;
-    position: fixed;
     left: 50%;
-    max-width:60em;
-    max-height:18em;
-    margin-top: 5em; /*set to a negative number 1/2 of your height*/
-    margin-left: -30em; /*set to a negative number 1/2 of your width*/
+    max-width:60vw;
+    max-height:18vh;
+    min-height: 50vh;
+    margin-top: 5vh; /*set to a negative number 1/2 of your height*/
+    margin-left: -30vw; /*set to a negative number 1/2 of your width*/
    /*height: 50vh;*/
     /*width: 80vw;*/
-    /*background-color: aqua;*/
+    /*!*background-color: aqua;*!*/
 }
 
 img {
@@ -155,7 +179,10 @@ img {
 
 #info {
     padding-top: 5.5vh;
+    padding-bottom: 5.5vh;
     max-width: 40vw;
+    font-size: 2.5vmin;
+
     margin: auto;
     color: white;
     text-align: center;
@@ -163,9 +190,15 @@ img {
 }
 
 #mainBTN {
-    max-width: 30vw;
-    padding-top: 40px;
-    margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 30vw;
+        /*width: 100px;*/
+        /*height: 100px;*/
+        /*background-color: blue;*/
+
 }
 
 .container {
@@ -190,4 +223,9 @@ left:0;
     font-size: inherit;
     margin-left: 43vw;
 
+}
+
+#inner {
+  width: 15%;
+  margin: 0 auto;
 }
